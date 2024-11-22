@@ -1,7 +1,3 @@
-console.log("TOKEN:", process.env.TOKEN);
-console.log("ROLE_ID:", process.env.ROLE_ID);
-console.log("CHANNEL_ID:", process.env.CHANNEL_ID);
-
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
 const client = new Client({
@@ -11,6 +7,10 @@ const client = new Client({
         GatewayIntentBits.GuildMessages,
     ],
 });
+
+console.log("TOKEN:", process.env.TOKEN || "TOKEN 값이 없습니다.");
+console.log("ROLE_ID:", process.env.ROLE_ID || "ROLE_ID 값이 없습니다.");
+console.log("CHANNEL_ID:", process.env.CHANNEL_ID || "CHANNEL_ID 값이 없습니다.");
 
 const TOKEN = process.env.TOKEN; // 환경 변수에서 봇 토큰 읽기
 const ROLE_ID = process.env.ROLE_ID; // 환경 변수에서 역할 ID 읽기
