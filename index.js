@@ -1,3 +1,7 @@
+console.log("TOKEN:", process.env.TOKEN);
+console.log("ROLE_ID:", process.env.ROLE_ID);
+console.log("CHANNEL_ID:", process.env.CHANNEL_ID);
+
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
 const client = new Client({
