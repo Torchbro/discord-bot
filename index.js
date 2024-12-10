@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
 const client = new Client({
@@ -61,3 +62,6 @@ client.on('guildMemberUpdate', (oldMember, newMember) => {
         });
 
         client.login(TOKEN);
+console.log("TOKEN:", process.env.TOKEN || "TOKEN 값이 없습니다.");
+console.log("ROLE_ID:", process.env.ROLE_ID || "ROLE_ID 값이 없습니다.");
+console.log("CHANNEL_ID:", process.env.CHANNEL_ID || "CHANNEL_ID 값이 없습니다.");
